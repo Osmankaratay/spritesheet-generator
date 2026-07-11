@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Editorial Aesthetic - High Contrast Black/White with Restrained Accent */
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-gray-50: #fafafa;
+  --color-gray-100: #f3f3f3;
+  --color-gray-200: #e8e8e8;
+  --color-gray-300: #d4d4d4;
+  --color-gray-400: #a3a3a3;
+  --color-gray-500: #737373;
+  --color-gray-600: #525252;
+  --color-gray-700: #404040;
+  --color-gray-800: #262626;
+  --color-gray-900: #171717;
+  --color-accent: #0066cc;
+  --color-accent-dark: #0052a3;
+  --color-accent-light: #3385dd;
+  --color-error: #dc2626;
+  --color-success: #16a34a;
+  --color-warning: #ea580c;
+}
+
+* {
+  @apply antialiased;
+}
+
+body {
+  @apply bg-white text-gray-900 font-sans;
+}
+
+a {
+  @apply text-accent hover:text-accent-dark transition-colors;
+}
+
+button {
+  @apply transition-colors;
+}
+
+.btn-primary {
+  @apply bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition-colors;
+}
+
+.btn-secondary {
+  @apply border-2 border-black text-black px-4 py-2 rounded hover:bg-gray-50 transition-colors;
+}
+
+.btn-accent {
+  @apply bg-accent text-white px-4 py-2 rounded hover:bg-accent-dark transition-colors;
+}
+
+.input-field {
+  @apply border-2 border-gray-300 px-3 py-2 rounded focus:border-accent focus:outline-none transition-colors;
+}
+
+.card {
+  @apply border-2 border-gray-200 rounded p-6 bg-white hover:shadow-lg transition-shadow;
+}
+
+.divider {
+  @apply h-px bg-gray-200 my-6;
+}
