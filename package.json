@@ -1,0 +1,32 @@
+{
+  "name": "spritesheet-generator",
+  "version": "0.1.0",
+  "description": "AI-powered 2D spritesheet generator for game developers",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces",
+    "build": "npm run build --workspaces",
+    "start": "node backend/dist/index.js",
+    "test": "npm run test --workspaces",
+    "test:coverage": "npm run test:coverage --workspaces",
+    "lint": "npm run lint --workspaces",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "db:migrate": "cd backend && npm run db:migrate",
+    "db:rollback": "cd backend && npm run db:rollback",
+    "db:seed": "cd backend && npm run db:seed",
+    "setup": "npm install && npm run db:migrate && npm run db:seed"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0"
+  }
+}
